@@ -2,9 +2,18 @@ body
 {
 padding: 0px; 
 margin: 0px; 
-background: url(../pic/15079001564740.png)no-repeat center center/cover;
 height: 500px;
 font-family: calibri; 
+}
+
+.cont
+{
+width: 100%; 
+height: 100%;
+ position: fixed;
+ background: url(../pic/hotel.jpg)no-repeat center center/cover;
+
+
 }
 
 #rez
