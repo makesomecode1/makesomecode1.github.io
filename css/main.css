@@ -30,6 +30,8 @@ text-align: center;
 margin: 0 auto;
 display: block;
 text-align: center;
+padding: 20px; 
+box-sizing: border-box;
 }
 
 .pi h1
@@ -161,4 +163,12 @@ textarea
 resize:none;
 box-sizing: border-box;
 padding: 15px
+}
+
+@media(max-width: 480px)
+{
+#rez
+{
+width: 100%
+}
 }
