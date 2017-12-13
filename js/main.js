@@ -1,78 +1,76 @@
-var hotel = 
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:0,
+    responsiveClass:true,
+    autoplay:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:false,
+            loop:true
+        },
+        600:{
+            items:1,
+            nav:false,
+            loop:true
+        },
+        1000:{
+            items:1,
+            nav:false,
+            loop:true
+        }
+    }
+})
+
+var click = document.getElementById("click");
+click.onclick = function()
 {
-luxe:5,
-standart:10,
-bs: 20,
-rooms: 35,
-name:'Florida',
-
-
-freeRooms:function(){
-
-	return this.luxe + this.standart + this.bs;
-}
+    alert("Click!")
 }
 
-var hname = document.getElementById("name");
-var fnub = document.getElementById("fnum");
-var luxe = document.getElementById("luxe");
-var stan = document.getElementById("stand");
-var bs = document.getElementById("bs");
-var btn = document.getElementById("btn");
-var select, value, text;
-var modal = document.getElementById("modal");
+var mbtn = document.getElementById("mbtn");
+var btnn = document.getElementsByClassName("btnn"); 
+var fm = document.getElementById("fm");
+var sm = document.getElementById("sm");
 var close = document.getElementById("close");
 
-
-
-
-hname.textContent = hotel.name;
-fnum.textContent = hotel.freeRooms();
-luxe.textContent = hotel.luxe;
-bs.textContent = hotel.bs;
-stand.textContent = hotel.standart;
-
-
-btn.onclick = function(){
-
-    select = document.getElementById("selectId"); // Выбираем  select по id
-    value = select.options[select.selectedIndex].value; // Значение value для выбранного option
-
-if(hotel.bs<=0, hotel.standart<=0, hotel.luxe<=0){
-    alert("Данные номера закончились")
- } 
-
-else if(value=="luxe"){
-    hotel.luxe = hotel.luxe - 1; 
-    luxe.textContent = hotel.luxe;
-    fnum.textContent = hotel.freeRooms();
-    modal.style.display = "block";
-    
+mbtn.onclick = function()
+{
+     for(var i = 0; i < btnn.length; i++){
+     btnn[i].style.display = "block"
 }
- else if(value=="stan"){
- 	hotel.standart = hotel.standart - 1; 
-    stand.textContent = hotel.standart;
-    fnum.textContent = hotel.freeRooms();
-    modal.style.display = "block";
- }
-
- else if(value=="bs"){
-    hotel.bs = hotel.bs - 1; 
-    bs.textContent = hotel.bs;
-    fnum.textContent = hotel.freeRooms();
-    modal.style.display = "block";
- }
-
- else{}
-
+fm.style.transform = "rotate(410deg)";
+sm.style.transform = "rotate(-410deg)";
+mbtn.style.opacity = '0'
 }
+
+
 
 close.onclick = function()
 {
-modal.style.display = "none";
+     for(var i = 0; i < btnn.length; i++){
+     btnn[i].style.display = "none";
+     fm.style.transform = "rotate(0deg)";
+sm.style.transform = "rotate(0deg)";
+}
+mbtn.style.opacity = '100'
 }
 
+var act = document.getElementById("act");
+var tab = document.getElementById("tab");
+var close1 = document.getElementById("close1");
 
+act.onclick = function()
+{
+    tab.style.top="43px"; 
+    tab.style.opacity="1";
+}
+
+close1.onclick = function()
+{
+    tab.style.top="-400px";
+    tab.style.opacity="0";
+}
 
 
 
