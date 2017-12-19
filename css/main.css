@@ -253,7 +253,8 @@ margin-top: 20px
 	align-items: flex-start;
 	position: relative;
 	
-	padding: 20px
+	padding: 20px;
+	box-sizing: border-box;
 }
 
 
@@ -430,7 +431,7 @@ margin-top: 20px
 
 	.leftlend h2
 	{
-		font-size: 32px; 
+		font-size: 27px; 
 		margin-bottom: 30px; 
 		overflow: auto;
 	}
@@ -468,8 +469,10 @@ margin-top: 20px
     
     .lendbtn
     {
-       width: 100px;
-       margin: 20px
+      
+       margin: 20px;
+       box-sizing: border-box;
+       text-align: center;
 
     }
 
