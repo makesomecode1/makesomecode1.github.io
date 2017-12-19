@@ -37,6 +37,30 @@ text-align: center;
 position: relative;
 }
 
+.usl
+{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 80%;
+    color: #CC009E;
+
+
+}
+
+#tab .usl a
+{
+	 color: #000;
+	 text-transform: none;
+}
+
+#tab .usl a:hover
+{
+    color: #0000FF
+}
+
 
 
 .table
@@ -49,6 +73,11 @@ position: relative;
 	z-index: 3;
 	transition: 0.3s ease;
 	border-top: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	box-shadow: 0px -2px 10px gray
 }
 
 #close1
@@ -98,9 +127,8 @@ width: 100%;
 padding: 50px; 
 text-align: center;
 font-size: 45px; 
-color: white;
-font-weight: lighter;
-text-shadow: 1px 1px #0E0E0E
+color: #000;
+font-weight: bolder;
 }
 
 .item h4 NOBR
@@ -119,22 +147,25 @@ margin: 0px
 
 
 
-.bl
+.container .bl
 {
-background: linear-gradient(to top, #CC009E, #FF007E) no-repeat center center/100%;
+background: linear-gradient(to bottom, #FF2400, #CD0095) no-repeat center center/100%;
 width: 100%;
 border: 0px;
 padding: 0px;
-
 }
+
+
+
 
 .bl2
 {
-background: linear-gradient(to top, #CC009E, #FF007E) no-repeat center center/100%;
+background: linear-gradient(to bottom, #FF2400, #CD0095) no-repeat center center/100%;
 width: 100%;
 border: 0px;
 padding: 0px;
 }
+
 
 .call
 {
@@ -175,7 +206,9 @@ padding: 0px;
 	background-repeat: no-repeat;
 	background-position: 0% 220%;
 	background-size: 100% 80%; 
-	color: #0E0E0E
+	color: #0E0E0E;
+
+
 
 }
 
@@ -191,7 +224,18 @@ padding: 0px;
 	cursor: pointer;
 	transition: 0.3s ease;
 	box-shadow: 0px 0px 10px #0E0E0E;
+	text-decoration: none;
 
+
+}
+
+.btns
+{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+width: 50%;
+margin-top: 20px
 }
 
 .lendbtn:hover
@@ -205,30 +249,14 @@ padding: 0px;
 	width: 40%; 
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: flex-start;
 	position: relative;
-	overflow: hidden;
+	
+	padding: 20px
 }
 
-.leftlend:hover .bull
-{
-left: 800px; 
-}
 
-.bull
-{
-    width: 100px; 
-    height: 100px; 
-
-    border-right: 10px solid white;
-    transform: rotate(-45deg);
-    position: absolute;
-    left: -170px; 
-    top: 75px;
-    transition: all 1s ease;
-    
-}
 
 
 .lending p
@@ -254,7 +282,8 @@ left: 800px;
 	flex-direction: row;
 	justify-content: space-around;
 	width: 50%; 
-	margin: 10px auto
+	margin: 10px auto;
+	margin-bottom: 100px
 }
 
 .teaser img
@@ -265,8 +294,42 @@ left: 800px;
 
 
 
+.tabs
+{
+	width: 50%; 
+	margin: 0 auto; 
+	min-height: 100px; 
+	background: red;
+	padding: 20px;
+	box-sizing: border-box;
+	margin: 10px 
+}
 
-@media screen and (max-width: 720px)
+.tab
+{
+	background: white; 
+	width: 200px;
+	padding: 20px
+}
+
+#f, #s, #t, #fo
+{
+	display: none;
+	
+}
+
+#f
+{
+	display: block;
+}
+
+.gray
+{
+	background: #DDDDDD
+}
+
+
+@media screen and (max-width: 1000px)
 {
     .mobil-menu
 {
@@ -389,4 +452,26 @@ left: 800px;
     {
 	display: none;
     }
+
+	.leftlend .btns
+	{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+    margin-top: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    width: 100%;
+    margin: 0px; 
+    
+    }
+    
+    .lendbtn
+    {
+       width: 100px;
+       margin: 20px
+
+    }
+
+
 }
