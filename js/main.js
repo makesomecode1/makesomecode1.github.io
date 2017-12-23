@@ -22,11 +22,6 @@ $('.owl-carousel').owlCarousel({
     }
 })
 
-var click = document.getElementById("click");
-click.onclick = function()
-{
-    alert("Click!")
-}
 
 var mbtn = document.getElementById("mbtn");
 var btnn = document.getElementsByClassName("btnn"); 
@@ -72,53 +67,18 @@ close1.onclick = function()
     tab.style.opacity="0";
 }
 
-var range = +document.getElementById("range").value;
-var ran = document.getElementById("range")
+var modal = document.getElementById("modal");
+var close2 = document.getElementById("close2");
+var clicker = document.getElementById("clicker");
 
-var f = document.getElementById("f");
-var s = document.getElementById("s");
-var t = document.getElementById("t");
-var fo = document.getElementById("fo");
-
-
-
-
-
-
-ran.onchange = function()
+clicker.onclick = function()
 {
-   range = document.getElementById("range").value;
-    if(range<=25)
-    {
-       f.style.display = "block";
-       s.style.display = "none";
-       t.style.display = "none";
-       fo.style.display = "none";
-    }
-    else if(range<=50)
-    {
-     f.style.display = "none";
-       s.style.display = "block";
-       t.style.display = "none";
-       fo.style.display = "none";   
-    }
-    else if(range<=75)
-    {
-      f.style.display = "none";
-       s.style.display = "none";
-       t.style.display = "block";
-       fo.style.display = "none";    
-    }
-
-    else if(range<=100)
-    {
-       f.style.display = "none";
-       s.style.display = "none";
-       t.style.display = "none";
-       fo.style.display = "block"; 
-    }
+  modal.style.display = "block"
 }
-
+close2.onclick = function()
+{
+  modal.style.display = "none"
+}
 
 
 

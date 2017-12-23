@@ -11,7 +11,22 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-	<div class="call" id="click">Связаться</div>
+	<div class="modal" id="modal"> 
+         <div class="content">
+         	<span id="close2">X</span>
+         	<h2>Заполните форму и я с вами свяжусь</h2><br>
+         	<form>
+
+         		<input type="text" name="name" placeholder="Ваше имя"><br><br>
+
+         		<input type="text" name="phone" placeholder="Ваш номер"><br><br>
+
+         		<input type="text" name="mail" placeholder="Введите почту"><br><br>
+         		<input type="submit" name="btn" value="Отправить">
+         	</form>
+         </div>
+	</div>
+	<div class="call" id="clicker">Связаться</div>
 	<header class="main_header">
 		<div class="logo">
 			
@@ -72,7 +87,7 @@
 
 		<div class="btns">
 
-		 <a href="#" class="lendbtn">Заказать</a>
+		 <a href="#"  onclick="modal.style.display = 'block';return false;" class="lendbtn">Заказать</a>
 		 <a href="#" class="lendbtn">Работы</a>
 		</div>
 
@@ -116,7 +131,7 @@
 
 		<div class="btns">
 
-		 <a href="#" class="lendbtn">Заказать</a>
+		 <a href="#" onclick="modal.style.display = 'block';return false;" class="lendbtn">Заказать</a>
 		 <a href="#" class="lendbtn">Работы</a>
 		</div>
 
